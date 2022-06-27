@@ -23,6 +23,12 @@ variable "local_tags" {
   description = "local tags"
 }
 
+variable "target_group_name" {
+  type        = string
+  description = "name of the target group"
+}
+
+
 variable "port" {
   type        = number
   description = "port number for target group"
