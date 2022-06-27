@@ -1,4 +1,4 @@
-output "elb_dns" {
-  value       = aws_lb.application_elb.dns_name
-  description = "elb domain"
+output "target_group_arn" {
+  value       = aws_lb_target_group_attachment.attach_instance.arn
+  description = "target group arn for elb module"
 }
