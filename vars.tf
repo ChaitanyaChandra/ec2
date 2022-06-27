@@ -22,3 +22,18 @@ variable "local_tags" {
   type        = map(any)
   description = "local tags"
 }
+
+variable "port" {
+  type        = number
+  description = "port number for target group"
+}
+
+variable "protocol" {
+  type        = string
+  description = "type of protocol for lb https/http"
+}
+
+variable "vpc_id" {
+  type        = string
+  description = "vpc_id for load_balancer"
+}
