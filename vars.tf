@@ -1,5 +1,5 @@
 variable vpc_security_group_ids {
-  type        = string
+  type        = list(string)
   description = "security group ids for ec2"
 }
 
