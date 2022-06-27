@@ -5,7 +5,7 @@ resource "aws_lb_target_group" "target_group" {
   vpc_id   = var.vpc_id
 }
 
-# resource "aws_lb_target_group_attachment" "attach_instance" {
-#   target_group_arn = aws_lb_target_group.instance.arn
-#   target_id        = aws_instance.vm[count.index].id
-# }
+resource "aws_lb_target_group_attachment" "attach_instance" {
+  target_group_arn = aws_lb_target_group.target_group.arn
+  target_id        = aws_instance.vm.id
+}
