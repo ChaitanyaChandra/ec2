@@ -23,6 +23,28 @@ variable "local_tags" {
   description = "local tags"
 }
 
+variable "application_elb_name" {
+  type        = string
+  description = "name of elb"
+}
+
+variable "application_elb_security_groups" {
+  type        = list(string)
+  description = "security gorups for elb"
+}
+
+variable "application_elb_subnets" {
+  type        = list(string)
+  description = "subent of elb"
+}
+
+
+variable "internal" {
+  type        = bool
+  description = "true or false. internal"
+}
+
+
 variable "target_group_name" {
   type        = string
   description = "name of the target group"
